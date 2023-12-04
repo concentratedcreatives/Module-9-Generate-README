@@ -1,5 +1,3 @@
-
-
 function renderLicenseBadge(license) {
     if (license) {
       return `![License](https://img.shields.io/badge/license-${license}-blue)`;
@@ -17,7 +15,7 @@ function renderLicenseBadge(license) {
   function renderLicenseSection(license) {
     if (license) {
       return `## License
-  
+    
   This project is licensed under the [${license} License](${renderLicenseLink(license)}).`;
     }
     return '';
@@ -28,8 +26,9 @@ function renderLicenseBadge(license) {
     const licenseSection = renderLicenseSection(data.license);
   
     return `# ${data.title}
-  
+
   ${licenseBadge}
+  ${licenseSection}
   
   ## Table of Contents
   - [Description](#description)
@@ -37,7 +36,6 @@ function renderLicenseBadge(license) {
   - [Usage](#usage)
   - [Contribution](#contribution)
   - [Test](#test)
-  ${licenseSection}
   - [Questions](#questions)
   
   ## Description
@@ -55,8 +53,7 @@ function renderLicenseBadge(license) {
   ## Test
   ${data.test}
   
-  ${licenseSection}
-  
+
   ## Questions
   Any questions? Reach me here:
   - GitHub: [${data.github}](https://github.com/${data.github})
